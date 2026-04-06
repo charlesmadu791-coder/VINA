@@ -23,6 +23,7 @@ body {
   background: #ffffff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   opacity: 0.85;
+  
 }
 
 .controls {
@@ -95,21 +96,23 @@ body {
   gap: 12px;
   font-size: 1.6rem;
   font-weight: 700;
+  color: #4a5568;
 }
 
 .nav ul {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   list-style: none;
+  font-size: larger;
 }
 
 .nav ul a {
   text-decoration: none;
-  font-weight: 600;
-  color: #020710;
+   font-weight: 700;
+  color: #4a5568;
 }
 .nav ul a:hover {
-  color: #0f4c81;
+  color: #125c9d;
 }
 
 /* HERO STYLE */
