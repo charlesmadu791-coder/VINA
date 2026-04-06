@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings & Contact</title>
+    <link rel="stylesheet" href="bookings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="top-nav">
+        <h1 class="brand">Vhina's Treat</h1>
+        <ul>
+            <li><a href="vina.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+        <div class="page-controls">
+            <button type="button" class="page-action"><i class="fa-solid fa-bars"></i><i
+                    class="fa-solid fa-chevron-down"></i></button>
+        </div>
+        <div class="page-dropdown">
+            <a href="vina.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="menu.html">Menu</a>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div>
+            <p class="eyebrow">Bookings & contact</p>
+            <h1>Reserve your experience</h1>
+            <p>Book a table, a tour, or a special service and send us a message anytime.</p>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section id="bookings" class="bookings-section">
+            <div class="section-head">
+                <p class="eyebrow">Our Bookings</p>
+                <h2>Choose a plan</h2>
+                <p>Easy reservation options for dining, tours, or private events.</p>
+            </div>
+
+            <div class="booking-cards">
+                <article class="booking-card">
+                    <h3>Table Reservation</h3>
+                    <p>Reserve a table for lunch or dinner with a custom menu.</p>
+                    <span>From ₦30,000/person</span>
+                </article>
+                <article class="booking-card">
+                    <h3>Guided Tour</h3>
+                    <p>Book a guided city or food tour with expert local hosts.</p>
+                    <span>From ₦80,000/person</span>
+                </article>
+                <article class="booking-card">
+                    <h3>Private Event</h3>
+                    <p>Plan a private celebration with catering and special seating.</p>
+                    <span>Custom pricing</span>
+                </article>
+            </div>
+
+            <form class="booking-form" action="#" method="post">
+                <h3>Book now</h3>
+                <div class="form-grid">
+                    <input type="text" name="name" placeholder="Your full name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                    <select name="service" required>
+                        <option value="">Choose service</option>
+                        <option value="table">Table reservation</option>
+                        <option value="tour">Guided tour</option>
+                        <option value="event">Private event</option>
+                    </select>
+                    <input type="number" name="guests" min="1" placeholder="Number of guests" required>
+                </div>
+                <textarea name="notes" rows="5" placeholder="Additional details"></textarea>
+
+                <button type="submit" onclick="alert('Booking request sent! We will contact you soon.');">Send booking
+                    request</button>
+            </form>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-panel">
+                <p class="eyebrow">Contact us</p>
+                <h2>Stay in touch</h2>
+                <p>If you have questions or need help with your booking, send us a message or call directly.</p>
+
+                <ul class="contact-list">
+                    <li><strong>Instagram:</strong> @vhinastreat</li>
+                    <li><strong>WhatsApp:</strong> +1234567890</li>
+                    <li><strong>Email:</strong> vina@gmail.com</li>
+                </ul>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <h3>Contact form</h3>
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+                <button type="submit" onclick="alert('Sent!');">Send message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Vhina's Treat</h2>
+                <p>Serving tasty moments with warm hospitality, one delicious bite at a time.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="vina.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="bookings.html">Bookings</a>
+                <a href="menu.html">Menu</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-regular fa-envelope"></i> vina@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +123 456 7890</p>
+                <p><i class="fa-brands fa-instagram"></i> @vhinastreat</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +123 456 7890</p>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Vhina's Treat. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.querySelector('.page-action');
+            const dropdown = document.querySelector('.page-dropdown');
+            if (toggle && dropdown) {
+                toggle.addEventListener('click', function () {
+                    dropdown.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
