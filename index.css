@@ -23,7 +23,6 @@ body {
   background: #ffffff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   opacity: 0.85;
-  
 }
 
 .controls {
@@ -108,7 +107,7 @@ body {
 
 .nav ul a {
   text-decoration: none;
-   font-weight: 700;
+  font-weight: 700;
   color: #4a5568;
 }
 .nav ul a:hover {
@@ -218,7 +217,7 @@ About */
   font-family: "nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .about p {
-  font-family: "Nunito", cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 /* footer */
@@ -277,7 +276,9 @@ About */
   .nav {
     display: flex;
     align-items: flex-start;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 18px 8px;
   }
 
