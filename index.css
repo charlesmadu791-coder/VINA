@@ -13,13 +13,13 @@ body {
 
 .nav {
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 22px 32px;
+  padding: 10px 20px;
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -96,7 +96,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 1.6rem;
   font-weight: 700;
   color: #7d2f6f;
@@ -324,7 +324,7 @@ About */
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 18px 8px;
+    padding: 10px 8px;
   }
 
   .nav ul {
@@ -351,7 +351,7 @@ About */
   }
 
   .hero {
-    height: 100vh;
+    height: 90vh;
     padding: 10px 10px;
   }
   .hero-content {
