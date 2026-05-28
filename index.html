@@ -16,25 +16,26 @@
 
 <body>
     <nav class="nav">
-        <div class="logo"> <img src="vhina/1775451578352.png" alt="Vhina's Treat Logo"
-                style="width: 70px; height: 70px; border-radius: 50px;"><span>Vhina's Treat</span></div>
+        <div class="logo"> <img src="vhina/Screenshot 2026-03-12 002005.png" alt="Vhina's Treat Logo"
+                style="width: 70px; height: 70px; border-radius: 50px; object-fit:cover;"><span>Vhina's Treat</span>
+        </div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="bookings.html">Inquiry</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="#contact">About</a></li>
+            <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a></li>
+            <li><a href="bookings.html"><i class="fa-solid fa-calendar-check"></i> Inquiry</a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-circle-info"></i> About</a></li>
         </ul>
         <div class="controls">
             <button type="button" class="page-action"><i class="fa-solid fa-bars"></i><i
                     class="fa-solid fa-chevron-down"></i></button>
         </div>
         <div class="dropdown">
-            <a href="#home">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="bookings.html">Inquiry</a>
-            <a href="menu.html">Menu</a>
-            <a href="#contact">Contact</a>
+            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+            <a href="bookings.html"><i class="fa-solid fa-calendar-check"></i> Inquiry</a>
+            <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+            <a href="#contact"><i class="fa-solid fa-circle-info"></i> About</a>
         </div>
     </nav>
 
@@ -46,22 +47,7 @@
             <p>Experience the best treats in the world! </p>
         </div>
     </section>
-
-    <section class="about">
-        <h1>About Us</h1>
-        <p>Vhina's Treat is a premier destination for authentic Nigerian cuisine and exquisite catering services in
-            Lagos. We specialize in flavorful jollof rice, succulent small chops, creamy puff puff, and custom party
-            platters that delight every palate. Perfect for birthdays, corporate events, weddings, and family
-            gatherings, our fresh ingredients and traditional recipes ensure unforgettable flavors. Discover the true
-            taste of Nigeria with us!</p>
-        <p>From intimate dinners to grand celebrations, Vhina's Treat handles it all with passion and precision. Our
-            menu features rich Okra soup, aromatic rice with chicken and plantain, and indulgent bomboloni desserts.
-            Committed to quality, hygiene, and customer satisfaction, we deliver joy through authentic Nigerian flavors.
-            Book your event today!</p> <br><br>
-        <address>Address:123 Main Street, Lagos, Nigeria</address>
-    </section>
-
-
+    <!-- EXPLORE -->
     <section class="cards">
         <article class="small-card">
             <h2>Explore our gallery</h2>
@@ -89,6 +75,21 @@
         </article>
     </section>
 
+    <!-- ABOUT -->
+    <section class="about">
+        <h1>About Us</h1>
+        <p>Vhina's Treat is a premier destination for authentic Nigerian cuisine and exquisite catering services in
+            Lagos. We specialize in flavorful jollof rice, succulent small chops, creamy puff puff, and custom party
+            platters that delight every palate. Perfect for birthdays, corporate events, weddings, and family
+            gatherings, our fresh ingredients and traditional recipes ensure unforgettable flavors. Discover the true
+            taste of Nigeria with us!</p>
+        <p>From intimate dinners to grand celebrations, Vhina's Treat handles it all with passion and precision. Our
+            menu features rich Okra soup, aromatic rice with chicken and plantain, and indulgent bomboloni desserts.
+            Committed to quality, hygiene, and customer satisfaction, we deliver joy through authentic Nigerian flavors.
+            Book your event today!</p> <br><br>
+        <address>Address:123 Main Street, Lagos, Nigeria</address>
+    </section>
+
 
     <!-- footer -->
 
@@ -107,10 +108,11 @@
             </div>
             <div class="footer-contact">
                 <h3>Contact</h3>
-                <p><i class="fa-regular fa-envelope"></i> vina@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> +123 456 7890</p>
-                <p><i class="fa-brands fa-instagram"></i> @vhinastreat</p>
-                <p><i class="fa-brands fa-whatsapp"></i> +123 456 7890</p>
+                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:vina@gmail.com" target="_blank" rel="noopener noreferrer">vina@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+1234567890">+123 456 7890</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/vhinastreat"
+                        target="_blank" rel="noopener noreferrer">@vhinastreat</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/+2347065601541" target="_blank" rel="noopener noreferrer">+2347065601541</a></p>
 
             </div>
         </div>
@@ -131,7 +133,10 @@
 
         function setHeroBackground(index) {
             currentIndex = (index + images.length) % images.length;
-            hero.style.backgroundImage = `url("${images[currentIndex]}")`;
+            hero.style.backgroundImage = `linear-gradient(180deg, rgba(255, 112, 146, 0.45), rgba(242, 190, 121, 0.35)), url("${images[currentIndex]}")`;
+            hero.style.backgroundPosition = 'center';
+            hero.style.backgroundSize = 'cover';
+            hero.style.backgroundRepeat = 'no-repeat';
         }
 
         let autoChange = setInterval(() => setHeroBackground(currentIndex + 1), 2000);

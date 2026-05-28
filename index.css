@@ -5,8 +5,8 @@
 }
 
 body {
-  background: #f4f6f8;
-  color: #333;
+  background: white;
+  color: #3d2640;
 }
 
 /* NAV */
@@ -20,11 +20,11 @@ body {
   align-items: center;
   gap: 20px;
   padding: 22px 32px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 156, 169, 0.35);
   border-radius: 0px;
   opacity: 1;
 }
@@ -43,14 +43,14 @@ body {
   width: 46px;
   height: 46px;
   border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  background: #ffffff;
-  color: #0f4c81;
+  border: 1px solid rgba(217, 88, 125, 0.35);
+  background: #fff2f6;
+  color: #a93d74;
   cursor: pointer;
 }
 
 .page-action:hover {
-  background: #eef5fb;
+  background: #ffe3ee;
 }
 
 .dropdown {
@@ -61,7 +61,7 @@ body {
   padding: 12px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
   flex-direction: column;
   gap: 8px;
   z-index: 20;
@@ -84,13 +84,13 @@ body {
 .dropdown a {
   padding: 10px 14px;
   border-radius: 12px;
-  color: #0f4c81;
+  color: #8b3561;
   text-decoration: none;
   font-weight: 600;
 }
 
 .dropdown a:hover {
-  background: #eef5fb;
+  background: #ffe5ef;
 }
 
 .logo {
@@ -99,7 +99,7 @@ body {
   gap: 12px;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #4a5568;
+  color: #7d2f6f;
 }
 
 .nav ul {
@@ -112,44 +112,57 @@ body {
 .nav ul a {
   text-decoration: none;
   font-weight: 700;
-  color: #4a5568;
+  color: #5b3a61;
 }
 .nav ul a:hover {
-  color: #125c9d;
+  color: #d75582;
 }
 
 /* HERO STYLE */
 .hero {
-  background: url("/VINA/vhina/jllof.jpg") center/cover no-repeat;
-
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(255, 112, 146, 0.45),
+      rgba(242, 190, 121, 0.35)
+    ),
+    url("vhina/jllof.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #fff;
   padding: 0;
 }
 
 .hero-content {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 40px 45px;
+  background: rgba(33, 13, 44, 0.78);
+  padding: 42px 45px;
   border-radius: 30px;
-  max-width: 550px;
+  max-width: 580px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
 }
 .hero-content h1 {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+  letter-spacing: 0.6px;
 }
 
 .hero-content span {
-  color: #5c93ca;
+  color: #ffd36a;
   font-style: italic;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 .hero-content p {
   font-size: 1.1rem;
+  color: #f4dcdc;
 }
 
 .cards {
@@ -158,34 +171,37 @@ body {
   gap: 24px;
   justify-content: center;
   padding: 40px 20px;
-  background: #eef5fb;
+  background: linear-gradient(180deg, #fff0f7 0%, #fff6e8 100%);
 }
 
 .small-card {
   width: 300px;
   background: #ffffff;
+  border: 1px solid rgba(255, 146, 172, 0.2);
   border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
   text-align: left;
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .small-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.18);
+  border-color: rgba(255, 121, 158, 0.35);
 }
 
 .small-card h2 {
   font-size: 1.4rem;
   margin-bottom: 14px;
-  color: #0d3d70;
+  color: #8b2f64;
 }
 
 .small-card p {
-  color: #555;
+  color: #5b415b;
   line-height: 1.6;
   margin-bottom: 22px;
 }
@@ -196,14 +212,14 @@ body {
   gap: 8px;
   padding: 12px 18px;
   border-radius: 999px;
-  background: #0066cc;
+  background: linear-gradient(135deg, #ff6b8a, #c54091);
   color: #fff;
   font-weight: 700;
   text-decoration: none;
 }
 
 .card-btn:hover {
-  background: #004a99;
+  background: linear-gradient(135deg, #c54091, #ff7b9e);
 }
 /* 
 About */
@@ -217,7 +233,7 @@ About */
 .about h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #0d3d70;
+  color: #8f3367;
   font-family: "nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .about p {
@@ -226,8 +242,8 @@ About */
 
 /* footer */
 .footer {
-  background: #0f4c81;
-  color: #f4f7fc;
+  background: #3c1c3b;
+  color: #f8e7f0;
   padding: 30px 20px;
 }
 
@@ -246,10 +262,35 @@ About */
 }
 
 .footer-brand p,
-.footer-links a,
-.footer-contact p {
-  color: #dbe6f3;
+.footer-links a {
+  color: #f3d5e1;
   line-height: 1.2;
+}
+
+.footer-contact p,
+.footer-contact a {
+  color: #ffffff;
+  line-height: 1.2;
+  transition:
+    color 0.25s ease,
+    text-decoration-color 0.25s ease;
+}
+
+.footer-contact a {
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #ffe3f2;
+  text-decoration: none;
+}
+
+.footer-contact a:active {
+  color: #ff0000;
+}
+
+.footer-contact a:visited {
+  color: #f0b6d8;
 }
 
 .footer-links a {
