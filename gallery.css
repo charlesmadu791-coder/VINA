@@ -385,6 +385,28 @@ nav ul li a:hover {
   line-height: 1.7;
 }
 
+/* Responsive: Gallery */
+@media screen and (max-width: 720px) {
+  .grid {
+    margin: 80px auto 24px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .card {
+    min-height: 220px;
+  }
+
+  .card img {
+    height: 100%;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+}
+
 /* Animations */
 @keyframes slideUpFromBottom {
   from {
@@ -480,3 +502,5 @@ nav ul li a:hover {
     text-align: center;
   }
 }
+
+

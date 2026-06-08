@@ -381,25 +381,6 @@ body {
   }
 }
 
-  .nav ul {
-    display: none;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 12px;
-  }
-
-  .controls {
-    display: flex;
-    position: absolute;
-    top: 30px;
-    right: 18px;
-  }
-
-  .dropdown {
-    display: flex;
-  }
-
-
 /* Responsive: Hero */
 @media screen and (max-width: 720px) {
   .hero {
@@ -412,4 +393,3 @@ body {
     max-width: 100%;
   }
 }
-
