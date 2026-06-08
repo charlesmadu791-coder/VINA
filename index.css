@@ -1,3 +1,4 @@
+/* Base styles */
 * {
   padding: 0;
   margin: 0;
@@ -9,11 +10,10 @@ body {
   color: #3d2640;
 }
 
-/* NAV */
-
+/* Navigation */
 .nav {
   position: sticky;
-  top: 0px;
+  top: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,7 @@ body {
   -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(255, 156, 169, 0.35);
-  border-radius: 0px;
+  border-radius: 0;
   opacity: 1;
 }
 
@@ -114,11 +114,42 @@ body {
   font-weight: 700;
   color: #5b3a61;
 }
+
 .nav ul a:hover {
   color: #d75582;
 }
 
-/* HERO STYLE */
+/* Responsive: Navigation */
+@media screen and (max-width: 720px) {
+  .nav {
+    display: flex;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 8px;
+  }
+
+  .nav ul {
+    display: none;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .controls {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 18px;
+  }
+
+  .dropdown {
+    display: flex;
+  }
+}
+
+/* Hero */
 .hero {
   background-image:
     linear-gradient(
@@ -147,6 +178,7 @@ body {
   max-width: 580px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
 }
+
 .hero-content h1 {
   font-size: 2.4rem;
   margin-bottom: 12px;
@@ -163,6 +195,19 @@ body {
 .hero-content p {
   font-size: 1.1rem;
   color: #f4dcdc;
+}
+
+/* Responsive: Hero */
+@media screen and (max-width: 720px) {
+  .hero {
+    height: 90vh;
+    padding: 10px;
+  }
+
+  .hero-content {
+    padding: 10px;
+    max-width: 100%;
+  }
 }
 
 .cards {
@@ -221,26 +266,37 @@ body {
 .card-btn:hover {
   background: linear-gradient(135deg, #c54091, #ff7b9e);
 }
-/* 
-About */
-
+/* About */
 .about {
   padding: 60px 20px;
   text-align: center;
   align-items: center;
   line-height: 1.6;
 }
+
 .about h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
   color: #8f3367;
-  font-family: "nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .about p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* footer */
+/* Responsive: About */
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 20px;
+  }
+
+  .about h1 {
+    text-align: center;
+  }
+}
+
+/* Footer */
 .footer {
   background: #3c1c3b;
   color: #f8e7f0;
@@ -297,7 +353,7 @@ About */
   display: block;
   text-decoration: none;
   color: #dbe6f3;
-  margin-bottom: 3 px;
+  margin-bottom: 5px;
   transition: color 0.25s ease;
 }
 
@@ -317,15 +373,13 @@ About */
   color: #c9d9ed;
 }
 
+/* Responsive: Footer */
 @media screen and (max-width: 720px) {
-  .nav {
-    display: flex;
-    align-items: flex-start;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 8px;
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
+}
 
   .nav ul {
     display: none;
@@ -345,29 +399,17 @@ About */
     display: flex;
   }
 
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
 
+/* Responsive: Hero */
+@media screen and (max-width: 720px) {
   .hero {
     height: 90vh;
-    padding: 10px 10px;
+    padding: 10px;
   }
+
   .hero-content {
-    padding: 10px 10px;
+    padding: 10px;
     max-width: 100%;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .about {
-    padding: 20px;
-  }
-
-  .about h1 {
-    flex-direction: column;
-    text-align: center;
-    gap: 24px;
-  }
-}

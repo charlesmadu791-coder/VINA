@@ -75,8 +75,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #d75582;
 }
-/* 
-Controls */
+/* Controls */
 
 .page-controls {
   display: none;
@@ -151,6 +150,33 @@ Controls */
 
 .home-link:hover {
   background: #d75582;
+}
+
+/* Responsive: Navbar */
+@media screen and (max-width: 720px) {
+  .top-nav {
+    flex-direction: flex-start;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .top-nav ul {
+    display: none;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .page-controls {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+  }
+
+  .page-dropdown {
+    display: flex;
+  }
 }
 
 /* HERO SECTION */
@@ -350,7 +376,28 @@ Controls */
   color: #334155;
 }
 
-/* footer */
+/* Responsive: Booking / Contact */
+@media screen and (max-width: 980px) {
+  .booking-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .booking-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
 .site-footer {
   background: #3c1c3b;
   color: #f8e7f0;
@@ -362,7 +409,7 @@ Controls */
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
   max-width: 1120px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .footer-brand h2,
@@ -427,53 +474,10 @@ Controls */
   color: #c9d9ed;
 }
 
+/* Responsive: Footer */
 @media screen and (max-width: 720px) {
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .booking-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-section {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .top-nav {
-    flex-direction: flex;
-    align-items: flex-start;
-    position: relative;
-  }
-
-  .top-nav ul {
-    display: none;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 12px;
-  }
-
-  .page-controls {
-    display: flex;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-  }
-
-  .page-dropdown {
-    display: flex;
-  }
-
-  .booking-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
   }
 }

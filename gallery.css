@@ -1,3 +1,4 @@
+/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -16,12 +17,15 @@ body {
   overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* Navbar */
+
+/* Link reset */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Navbar container */
 nav.nav {
   position: sticky;
   top: 0;
@@ -41,12 +45,14 @@ nav.nav {
   opacity: 1;
 }
 
+/* Brand */
 .nav .brand {
   font-size: 1.4rem;
   font-weight: 700;
   color: #7d2f6f;
 }
 
+/* Navigation links */
 .nav ul {
   display: flex;
   gap: 24px;
@@ -80,12 +86,14 @@ nav ul li a:hover {
   color: #d75582;
 }
 
+/* Controls */
 .controls {
   display: none;
   align-items: center;
   gap: 10px;
 }
 
+/* Page action buttons */
 .page-action {
   display: inline-flex;
   align-items: center;
@@ -112,6 +120,7 @@ nav ul li a:hover {
   position: relative;
 }
 
+/* Page header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -141,35 +150,7 @@ nav ul li a:hover {
   max-width: 680px;
 }
 
-.controls {
-  align-items: center;
-  gap: 10px;
-}
-
-.page-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  border: 1px solid rgba(217, 88, 125, 0.35);
-  background: #fff2f6;
-  color: #a93d74;
-  cursor: pointer;
-}
-
-.page-action:hover {
-  background: #ffe3ee;
-}
-
-.header,
-.controls,
-.nav {
-  position: relative;
-}
-
+/* Dropdown menu */
 .dropdown {
   position: absolute;
   top: calc(100% + 12px);
@@ -214,6 +195,41 @@ nav ul li a:hover {
   background: #d75582;
 }
 
+/* Responsive: Header / Navigation */
+@media screen and (max-width: 720px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .nav {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 18px 8px;
+  }
+
+  .nav ul {
+    display: none;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .controls {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+  }
+
+  .dropdown {
+    display: flex;
+  }
+}
+
+/* Gallery grid */
 .grid {
   margin: 120px auto 48px;
   display: grid;
@@ -298,6 +314,7 @@ nav ul li a:hover {
   --i: 25;
 }
 
+/* Gallery cards */
 .card {
   position: relative;
   display: grid;
@@ -368,36 +385,7 @@ nav ul li a:hover {
   line-height: 1.7;
 }
 
-@media screen and (max-width: 720px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-  }
-
-  .nav ul {
-    display: none;
-  }
-
-  .controls {
-    display: flex;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-  }
-
-  .controls {
-    display: flex;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-  }
-
-  .dropdown {
-    display: flex;
-  }
-}
-
+/* Animations */
 @keyframes slideUpFromBottom {
   from {
     opacity: 0;
@@ -485,32 +473,8 @@ nav ul li a:hover {
   color: #c9d9ed;
 }
 
+/* Responsive: Footer */
 @media screen and (max-width: 720px) {
-  .nav {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    padding: 18px 8px;
-  }
-
-  .nav ul {
-    display: none;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 12px;
-  }
-
-  .controls {
-    display: flex;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-  }
-
-  .dropdown {
-    display: flex;
-  }
-
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;

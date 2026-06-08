@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Vhina's Treat</title>
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- Navigation section -->
     <nav class="nav">
         <h1 class="brand">Vhina's Treat</h1>
         <ul>
@@ -28,13 +29,15 @@
                     class="fa-solid fa-chevron-down"></i></button>
         </div>
         <div class="dropdown">
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="bookings.html">Inquiry</a>
-            <a href="menu.html">Menu</a>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+            <a href="bookings.html"><i class="fa-solid fa-calendar-check"></i> Inquiry</a>
+            <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+            <!-- <a href="#contact"><i class="fa-solid fa-circle-info"></i> About</a> -->
         </div>
     </nav>
 
+    <!-- Page header section -->
     <header class="header">
         <div>
             <p class="collection">Our Collection</p>
@@ -44,6 +47,7 @@
 
     </header>
 
+    <!-- Gallery grid section -->
     <main class="grid">
         <article class="card">
             <img src="vhina/download (1).jpg" alt="Restaurant dinner with wine glass">
@@ -394,8 +398,7 @@
 
     </main>
 
-
-
+    <!-- Footer section -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
@@ -409,18 +412,21 @@
                 <a href="bookings.html">Inquiry</a>
                 <a href="menu.html">Menu</a>
             </div>
-            <div class="footer-contact">
+            <div class="footer-contact" id="contact">
                 <h3>Contact</h3>
-                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:vina@gmail.com" target="_blank" rel="noopener noreferrer">vina@gmail.com</a></p>
+                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:vina@gmail.com" target="_blank"
+                        rel="noopener noreferrer">vina@gmail.com</a></p>
                 <p><i class="fa-solid fa-phone"></i> <a href="tel:+2347065601541">+234 706 560 1541</a></p>
                 <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/vhinastreat"
                         target="_blank" rel="noopener noreferrer">@vhinastreat</a></p>
-                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/+2347065601541" target="_blank" rel="noopener noreferrer">+234 706 560 1541</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/+2347065601541" target="_blank"
+                        rel="noopener noreferrer">+234 706 560 1541</a></p>
             </div>
         </div>
         <p class="footer-copy">&copy; 2026 Vhina's Treat. All rights reserved.</p>
     </footer>
 
+    <!-- Page interaction script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const toggle = document.querySelector('.page-action');
