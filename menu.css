@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: \"Inter Tight\", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   background: white;
   color: #3d2640;
   min-height: 100vh;
@@ -483,7 +483,7 @@ nav ul li a:hover {
   justify-content: center;
   font-weight: 700;
   font-size: 1rem;
-  font-family: \"Inter Tight\", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   opacity: 0.8;
 }
 
@@ -581,7 +581,7 @@ nav ul li a:hover {
 }
 
 .footer-brand h2,
-.rfooter-links h3,
+.footer-links h3,
 .footer-contact h3 {
   margin-bottom: 8px;
 }
